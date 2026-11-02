@@ -1,0 +1,225 @@
+/* ---------------- ✅ ⁡⁢⁢⁢C O N F I R M A T I O N   S C R E E N⁡ ---------------- */
+
+/* Envelope Image */
+.envelope_img {
+  display: flex;
+  width: 7.375rem;
+  height: 7.375rem;
+  margin: 0 auto;
+}
+
+/* Confirmation wrapper/grid */
+.confirm-wrapper {
+  display: grid;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.main-content_confirm {
+  width: 100%;
+  display: grid;
+  padding-top: 0rem;
+}
+
+/* Main container for confirmation info */
+.confirm-pg_container {
+  display: grid;
+  grid-template-columns: 1.2fr auto 1fr;
+  grid-template-rows: repeat(7, auto);
+  position: relative;
+}
+
+.heading_h1 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  align-self: left;
+  justify-self: left;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+/* Report ID Number */
+.report-id-row {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  align-self: start;
+  justify-self: left;
+  margin: 0 0 1rem 0;
+  font-size: 1.09rem;
+  color: #333;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+/* Doesn't work, using class instead, it tried to apply the grid to the individual elements rather than the whole row */
+/* #report-id,
+#copy-report-id,
+#copy-success {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  align-self: left;
+  justify-self: left;
+  margin-top: 0rem;
+  margin: 0;
+  font-size: 1rem;
+} */
+
+#copy-report-id {
+  padding: 0.25rem 1.1rem;
+  font-size: 1.04rem;
+  border-radius: 6px;
+  background: #dde9ba;
+  border: 2px solid #77a741;
+  color: #222;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    border 0.2s;
+}
+
+#copy-report-id:hover,
+#copy-report-id:focus {
+  background: #cbe495;
+  border-color: #659a34;
+  outline: none;
+}
+
+#copy-success {
+  color: #219653;
+  font-size: 0.99em;
+  margin-left: 0.5rem;
+  display: none;
+}
+
+.sub-heading {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  align-self: left;
+  justify-self: left;
+}
+
+.ul_confirmation-pg {
+  grid-column: 2/3;
+  grid-row: 4/5;
+  align-self: left;
+  justify-self: left;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  list-style-position: outside;
+  padding-left: 1.5rem;
+}
+
+.li_con-layout {
+  line-height: 1.5;
+  font-size: 1.2rem;
+}
+
+.text_reviewing-days {
+  font-weight: bold;
+}
+
+.track-report {
+  grid-column: 2/3;
+  grid-row: 5/6;
+  align-self: left;
+  justify-self: left;
+}
+
+.visit-dashboard {
+  grid-column: 2/3;
+  grid-row: 6/7;
+  align-self: left;
+  justify-self: left;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.report-note {
+  grid-column: 2/3;
+  grid-row: 7/8;
+  margin-top: 4rem;
+  font-size: 1.2rem;
+  align-self: left;
+  justify-self: left;
+  color: #545454;
+  border-left: 0.1875rem solid #999;
+  padding-left: 1rem;
+  line-height: 1.6;
+}
+
+/* Confirmation footer */
+.footer-confirmation-pg {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  max-width: 100%;
+  padding-bottom: 2.5rem;
+  padding-top: 1rem;
+}
+
+/* View reports button */
+.view-report-button {
+  justify-self: end;
+  background-color: #dde9ba;
+  border: solid 0.25rem #77a741;
+  color: #000;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  /* Confirmation Screen */
+  .confirm-pg_container {
+    grid-template-columns: 1fr !important;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .main-content_confirm {
+    padding-top: 0rem !important;
+  }
+  .heading_h1 {
+    font-size: 1.8rem;
+    padding-top: 0rem !important;
+    padding-bottom: 1.875rem;
+  }
+  .report-id-row {
+    grid-column: 1 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-bottom: 0.6rem;
+    font-size: 1rem;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .report-note {
+    margin-top: 1.5rem !important;
+    font-size: 0.95rem !important;
+  }
+  .heading_h1,
+  .sub-heading,
+  .ul_confirmation-pg,
+  .track-report,
+  .visit-dashboard,
+  .report-note {
+    grid-column: 1 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: left;
+  }
+  .report-note {
+    padding-left: 1rem !important;
+  }
+  .li_con-layout {
+    font-size: 1rem !important;
+    line-height: 1.2 !important;
+  }
+  .envelope_img {
+    display: none !important;
+  }
+  .footer-confirmation-pg {
+    padding-bottom: 0.3rem !important;
+    padding-top: 0.3rem;
+  }
+}
